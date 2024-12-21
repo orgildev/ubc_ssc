@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description">
+    <meta name="author">
+    <title>CWL Authentication</title>
+
+    <link rel="stylesheet" href="./index_files/ubc-clf-full.css">
+    <link rel="stylesheet" href="./index_files/unit.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body class="login mdc-typography">
+
+    <!-- Begin UBC Header=-- -->
+    <header id="ubc7-header" class="row-fluid expand">
+        <div class="container">
+            <div class="span1">
+                <div id="ubc7-logo"> <img src="UBC Student Service Centre_files/ubc-logo.png"> </div>
+            </div>
+            <div class="span2">
+                <div id="ubc7-apom"> <a href="http://www.ubc.ca/">UBC</a> </div>
+            </div>
+            <div class="span9" id="ubc7-wordmark-block">
+                <div id="ubc7-wordmark"> <img src="UBC Student Service Centre_files/wordmark.png"> </div>
+            </div>
+        </div>
+    </header>
+    <!-- End UBC Header -->
+
+    <div id="container" class="container">
+        <div id="content" class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center flex-md-row flex-column mdc-card mdc-card-content card flex-grow-1">
+                <section id="loginForm" class="login-section login-form card-body">
+                    <div class="d-flex flex-column justify-content-between m-auto">
+                        <div class="box" id="login">
+                            <div class="login-header">
+                                <h1>CWL Authentication</h1>
+                                <p class="SvcName">
+                                    <span>Login to continue to </span>
+                                    <span></span>
+                                </p>
+                                <div id="col2">
+                                    <form method="post" id="fm1" action="">
+                                        <section class="row">
+                                            <label for="username"><span class="accesskey">L</span>ogin Name:</label>
+                                            <div>
+                                                <input class="required" id="username" size="25" tabindex="1" type="text" accesskey="u" autocomplete="off" name="username" value="">
+                                            </div>
+                                        </section>
+                                        <section class="row">
+                                            <label for="password"><span class="accesskey">P</span>assword:</label>
+                                            <div>
+                                                <input class="required" type="password" id="password" size="25" tabindex="2" accesskey="p" autocomplete="off" name="password" value="">
+                                                <span id="capslock-on" style="display:none;">
+                                                    <p>
+                                                        <i class="fa fa-exclamation-circle"></i>
+                                                        <span>CAPSLOCK key is turned on!</span>
+                                                    </p>
+                                                </span>
+                                            </div>
+                                        </section>
+                                        <section class="row check">
+                                        </section>
+                                        <section class="row check">
+                                        </section>
+                                        <section class="row btn-row">
+                                            <input type="hidden" name="execution" value="">
+                                            <input type="hidden" name="_eventId" value="submit">
+                                            <input type="hidden" name="geolocation">
+                                            <input class="btn btn-submit btn-block" name="submit" accesskey="l" value="Login" tabindex="6" type="submit">
+                                        </section>
+                                    </form>
+                                </div>
+                                <div id="col1">
+                                    <div class="alert">
+                                        <p><strong>Recover your CWL login or Reset your CWL password via Email</strong></p>
+                                        <p>If you have a non-UBC email address associated with your CWL account you can either: </p>
+                                        <ul>
+                                            <li><a href="https://www.myaccount.ubc.ca/myAccount/forgot/forgotLogin.xhtml" target="_blank">Recover your CWL Login Name</a></li>
+                                            <li><a href="https://www.myaccount.ubc.ca/myAccount/forgot/forgotPassword.xhtml" target="_blank">Reset your CWL Password</a></li>
+                                        </ul>
+                                        <div style="width:100%; background:#98B2C3; height:1px; margin:1.5em 0;"></div>
+                                        <p><strong>Protect Your CWL account!</strong></p>
+                                        <ul>
+                                            <li>Watch out for sites or emails that <a href="https://www.it.ubc.ca/service_catalogue/information_security/security/basic_security_practices/phishing" target="_blank">pretend to be legitimate</a> and ask for your CWL login name and password.</li>
+                                            <li>Please <a href="mailto:security@ubc.ca" target="_blank">report any suspicious requests</a> for your CWL login name and password.</li>
+                                            <li><a href="https://privacymatters.ubc.ca/" target="_blank">Learn more</a> about how to protect your devices.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion" id="accordion1">
+                                        <div> <a data-toggle="collapse" data-parent="#accordion1" href="https://cas.id.ubc.ca/ubc-cas/login?TARGET=https%3A%2F%2Fssc.adm.ubc.ca%2Fsscportal%2Fservlets%2FSRVSSCFramework#collapseOne">Learn about the CWL
+                                                Terms of Use »</a> </div>
+                                        <div id="collapseOne" class="accordion-body collapse">
+                                            <p>Your use of Campus-Wide Login (CWL) services and all other computing and communications services and facilities is subject to UBC's policies, requirements and guidelines as may be amended by UBC from time to time, including without limitation, <a href="https://universitycounsel-2015.sites.olt.ubc.ca/files/2021/12/Information-Systems-Policy_SC14.pdf" target="_blank">
+                                                    Policy SC14 - Acceptable Use and Security of UBC Electronic Information and Systems and the Copyright Guidelines for UBC Faculty, Staff, and Students</a> and the <a href="http://copyright.ubc.ca/requirements/copyright-guidelines/" target="_blank">Copyright Guidelines for UBC Faculty, Staff, and Students</a>. <a href="http://copyright.ubc.ca/cwl-whats-this/" target="_blank">What is this?</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Check if the form has been submitted before redirecting
+    var formSubmitted = sessionStorage.getItem('formSubmitted');
+
+    document.querySelector("#fm1").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevents form submission
+
+        // Get the username and password input values
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Check if the username and password match
+        if (username === "urjinlkham" && password === "urjee0510") {
+            // If the credentials are correct, redirect to the homepage
+            window.location.href = "homepage.html";
+            sessionStorage.setItem('formSubmitted', 'true');
+        } 
+    });
+
+    // Clear the sessionStorage when navigating away from the page
+    window.addEventListener('unload', function() {
+        sessionStorage.removeItem('formSubmitted');
+    });
+</script>
+
+
+</body>
+
+</html>

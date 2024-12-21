@@ -1,0 +1,40 @@
+
+if (document.domain != "ubc.ca") { 
+
+  if (typeof appl_context == 'undefined') { //NOSONAR Global Variable
+    //if no appl_context has been declared then we will load the static pieces from the defualt app.
+    //otherwise we can load from the appl_context itself.
+    var appl_context = '';
+  }
+  document.write(' <!-- Header --> ');
+  document.write(' <table border="0" cellspacing="0" cellpadding="0" summary="UBC common nav bar code" width="760"> ');
+  document.write('   <tr>  ');
+  document.write('     <td width="140"><img src="' + appl_context + '/static/shared/images/banner/ubc_home1.gif" alt="UBC Home Page" width="49" height="16" border="0"></td> ');
+  document.write('     <td width="*"><img src="' + appl_context + '/static/shared/images/banner/ubc_pixel_transp.gif" width="1" height="16" alt="-"></td> ');
+  document.write('   </tr> ');
+  document.write('  <tr>  ');
+  document.write('     <td colspan="2" bgcolor="#003399">  ');
+  document.write('       <table border="0" cellspacing="0" cellpadding="0"> ');
+  document.write('         <tr>  ');
+  document.write('           <td nowrap align="left" valign="top" width="49"><img src="' + appl_context + '/static/shared/images/banner/ubc_home2.gif" width="49" height="27" alt="UBC Home Page" border="0"></td> ');
+  document.write('           <td align="left" width="236" valign="top"><img src="' + appl_context + '/static/shared/images/banner/ubc_pixel_transp.gif" width="1" height="5" alt="-" border="0"><br> ');
+  document.write(' 		         <img src="' + appl_context + '/static/shared/images/banner/ubc_univbc1.gif" width="94" height="13" alt="UBC Home Page" border="0"><img src="' + appl_context + '/static/shared/images/banner/ubc_univbc2.gif" width="113" height="13" border="0" alt="UBC Home Page"><img src="' + appl_context + '/static/shared/images/banner/ubc_pixel_transp.gif" width="13" height="10" alt="-" border="0"><br> ');
+  document.write(' 		         <img src="' + appl_context + '/static/shared/images/banner/ubc_pixel_transp.gif" width="1" height="2" alt="-" border="0"></td> ');
+  document.write('           <td align="right" width="465" valign="top">&nbsp;</td> ');
+  document.write('         </tr> ');
+  document.write('       </table> ');
+  document.write('     </td> ');
+  document.write('   </tr> ');
+  document.write(' </table> ');
+  document.write(' <!-- Student Services nav bar code --> ');
+  document.write(' <table border="0" cellspacing="0" cellpadding="0" width="760"> ');
+  document.write(' <tr valign="top"> ');
+  document.write(' <td bgcolor="#d29a15" height="16" width="260"><img src="' + appl_context + '/static/shared/images/banner/ubc_pixel_transp.gif" width="1" height="16" border="0"></td><td bgcolor="f5dca0" height="16" width="500"><img src="' + appl_context + '/static/shared/images/banner/ubc_pixel_transp.gif" width="1" height="16" alt="UBC Home Page" border="0"></td> ');
+  document.write(' </tr> ');
+  document.write(' <tr><td colspan="2"><img src="' + appl_context + '/static/shared/images/banner/ubc_pixel_transp.gif" width="1" height="2" border="0"></td></tr>');
+  document.write(' </table> ');
+  document.write('  <!-- END Header --> ');
+
+  document.write(' <table height="90%" width="760" border="0" cellpadding="0" cellspacing="0"> ');
+  document.write(' <tr><td valign="top"> ');
+}

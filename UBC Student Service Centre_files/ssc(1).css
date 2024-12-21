@@ -1,0 +1,1175 @@
+html {
+margin:0;
+padding:0;
+}
+
+body {
+margin:0;
+padding:0;
+font-family:Verdana, Helvetica, Arial, sans-serif;
+font-size:11px;
+}
+
+h1 {
+margin:0px;
+padding:0 0 12px 0;
+font-size:17px;
+font-weight:bold;
+color:#002859;
+}
+
+h2 {
+margin:0px;
+padding:0 0 12px 0;
+font-size:17px;
+font-weight:normal;
+color:#d8a838;
+}
+
+h3 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+hr {
+  background-color:lightGrey;
+  color:lightGrey;
+  height:1px;
+  width: 50%;
+  margin:20px auto 10px auto;
+}
+
+p {
+margin-top: 3px;
+}
+
+a {
+color:#0045a9;
+text-decoration:none;
+}
+
+a:hover {
+color:#d8a838;
+text-decoration:none;
+}
+
+a:visited {
+  color:#0045a9;
+  text-decoration:none;
+}
+
+a:active {
+    color:#0045a9;
+    text-decoration:none;
+}
+
+a:focus {
+outline:none;
+}
+
+img {
+border:none;
+}
+
+
+
+div#header {
+position:relative;
+width:1000px;
+height:45px;
+margin:0 auto;
+padding:0px;
+}
+
+/* upper left logo */
+
+div#ubc-logo {
+position:absolute;
+top:0px;
+left:12px;
+width:258px;
+height:46px;
+background:transparent url(/static/ssc/images/ubclogo.png) top left no-repeat;
+}
+
+/* upper right logout function */
+
+/* main navigation */
+
+div#nav-holder {
+background:transparent url(/static/ssc/images/menuBg.png) bottom left repeat-x;
+position:relative;
+z-index:6;
+margin-top: 1px;
+}
+
+div#main-nav {
+position:relative;
+width:1000px;
+height:100px;
+margin: auto;
+padding-top:10px;
+}
+
+.main-nav-title {
+margin:0 0 6px 12px;
+padding:0;
+font-size:30px;
+font-weight:normal;
+letter-spacing: 1px;
+color:#fff;
+}
+
+/* main navigation menu items */
+
+div#main-nav ul {
+margin:0 0 0 12px;
+padding:0;
+list-style:none;
+color:#fff;
+}
+
+div#main-nav ul li {
+margin:0 0 0 20px;
+padding:0;
+display:inline;
+font-size:11px;
+}
+
+div#main-nav ul li.first-nav-item {
+margin-left:0;
+}
+
+div#main-nav ul li a {
+color:#fff;
+text-decoration:none;
+}
+
+div#main-nav ul li a:hover {
+color:#d8a838;
+}
+
+div#main-nav ul li a.goldTextMenu {
+color:#d8a838;
+}
+
+div#main-nav ul li a.goldTextMenu:hover {
+color:#fff;
+}
+
+#main-menu-right {
+ float: right;
+ margin-right: 30px;
+}
+
+
+#student-info {
+position:absolute;
+bottom:10px;
+right:25px;
+width:415px;
+text-align: right;
+color: white;
+z-index:100 !important;
+}
+
+/* secondary nav and banner section */
+
+div#secondary-nav-banner {
+margin:0px auto;
+padding:0;
+}
+
+div#not-logged-in-bottom {
+width:1000px;
+margin: 0 auto 0 auto;
+padding:20px 0 0 0;
+}
+
+/* secondary nav section */
+
+div#secondary-nav {
+float:left;
+width:400px;
+margin-left:15px;
+}
+
+div#login {
+float:left;
+width:400px;
+height: 203px;
+margin:40px 0 20px 20px;
+}
+
+div#login p {
+  margin-top: 8px;
+}
+
+div#login h1 {
+  padding-bottom: 6px;
+}
+
+
+/* secondary nav items */
+
+.secondary-nav ul {
+margin:0px;
+padding:0px;
+list-style:none;
+}
+
+.secondary-nav ul li {
+padding: 5px 10px;
+margin-bottom: 10px;
+margin-left: 30px;
+width: 320px;
+height: 25px;
+line-height: 25px;
+font-size: 13px;
+font-weight: normal;
+text-align: center;
+background: #002859;
+border: 1px solid #002859;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.secondary-nav ul li a {
+color: #FFFFFF;
+text-decoration: none;
+font-size: 16px;
+}
+
+.secondary-nav ul li a:hover {
+color:#d8a838;
+}
+
+div#banner {
+float:right;
+width:460px; /* set width to whatever it needs to be */
+height:263px; /* height should not change */
+}
+
+/* application checklist */
+#checklist {
+    float: right;
+    width: 450px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.checklist-header {
+    font-size: 13px;
+    font-weight: normal;
+    background: #002859;
+    border: 1px solid #002859;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.checklist-item {
+    border: 1px solid #002859;
+    border-top: none;
+    color: lightGrey;
+}
+
+.checklist-item:hover {
+    background: #F5F5F5;
+}
+
+.checklist-item a {
+    color: #002859;
+    text-decoration: none;
+}
+
+.checklist-item a:hover {
+    color: #D8A838;
+}
+
+.checklist-icon {
+    float: left;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+}
+
+.checklist-icon0 {
+    background-image: url(/static/ssc/images/checklistIconNotStarted.png);
+}
+
+.checklist-icon1 {
+    background-image: url(/static/ssc/images/checklistIconInProgress.png);
+}
+
+.checklist-icon2 {
+    background-image: url(/static/ssc/images/checklistIconCompleted.png);
+}
+
+.checklist-title {
+    float: left;
+    padding: 8px;
+}
+
+.checklist-status {
+    float: right;
+    width: 65px;
+    padding: 8px;
+}
+
+.checklist-info {
+    clear: both;
+    padding: 0px 20px 8px 60px;
+    font-size: 11px;
+}
+
+/* messages-alerts and dropdown box */
+
+div#messages-alerts {
+margin-top:15px;
+clear:both;
+}
+
+div#messages-notification {
+height:32px;
+}
+
+div.has-messages {
+background:#db0000;
+}
+
+div.has-read-messages {
+background:#D8A838;
+}
+
+div.has-no-messages {
+background:#ccc;
+}
+
+div#messages-notification-text {
+width:970px;
+margin:0 auto;
+}
+
+div.ssc-text {
+  background: lightgray;
+}
+
+div#messages-alerts h5 {
+line-height:32px;
+font-size:13px;
+font-weight:normal;
+color:#fff;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+div#messages-alerts a {
+line-height:32px;
+text-decoration:none;
+}
+
+div#messages-unread {
+background:#e5e5e5;
+}
+
+div#messages-unread-text {
+width:1000px;
+margin:0 auto;
+padding-bottom:10px;
+
+}
+
+div#messages-unread p {
+padding:8px 0 8px 0;
+margin: 0 auto;
+width: 970px;
+}
+
+/* three column main content area */
+
+#banner img {
+    max-width: 100%;
+    height: auto;
+ }
+
+div#content {
+margin:15px auto 0;
+}
+
+div#ssc-campus_content {
+  //  border-left:thin solid lightGrey;
+  //  border-right:thin solid lightGrey;
+    float:left;
+    margin:0pt;
+    padding-left:25px;
+    padding-right:25px;
+}
+
+/* left column and left column togglers */
+
+div#ssc-headlines {
+    border-left:thin solid lightGrey;
+    border-right:thin solid lightGrey;
+    float:left;
+    margin:0pt;
+    padding-left:25px;
+    padding-right:25px;
+    width:270px;
+}
+
+
+#body-right .ssc-title {
+    margin:5px 0 5px 0;
+    padding-top:5px;
+    border-top: thin solid lightgray;
+    background: transparent url(/static/ssc/images/toggleOpen.png) no-repeat scroll 0 8px;
+}
+
+#body-right .toggleOpen {
+    background: transparent url(/static/ssc/images/toggleOpen.png) no-repeat scroll 0 8px;
+}
+
+#body-right .toggleClosed {
+    background: transparent url(/static/ssc/images/toggleClosed.png) no-repeat scroll 0 8px;
+}
+
+
+.ssc-title {
+    font-weight:bold;
+    margin:5px 0 0 0;
+    padding:0 20px 0 28px;
+    background: transparent url(/static/ssc/images/toggleOpen.png) no-repeat scroll 0 0px;
+    cursor:pointer;
+}
+
+.faq-title {
+    font-weight:bold;
+    margin:5px 0 0 0;
+    padding:0 20px 0 28px;
+    background: transparent url(/static/ssc/images/toggleOpen.png) no-repeat scroll 0 0px;
+    cursor:pointer;
+    min-width: 180px;
+}
+
+.grades-title {
+    font-weight:bold;
+    font-weight:bold;
+    margin:5px 0 0 0;
+    padding:0 20px 0 28px;
+    background: transparent url(/static/ssc/images/toggleOpen.png) no-repeat scroll 0 0px;
+    cursor:pointer;
+    min-width: 180px;
+}
+
+.toggleOpen {
+    background: transparent url(/static/ssc/images/toggleOpen.png) no-repeat scroll 0 0px;
+}
+
+.toggleClosed {
+    background: transparent url(/static/ssc/images/toggleClosed.png) no-repeat scroll 0 0px;
+}
+
+.ssc-posted-date {
+font-size:9px;
+font-size:9px;
+color:#afafaf;
+margin:0px;
+padding:0 0 0 28px;
+}
+
+div.ssc-content {
+padding:7px 8px 7px 13px;
+margin-top: 4px;
+margin-left:27px;
+background-color: lightGray;
+display:none;
+}
+div.admissions-content {
+margin-top: 4px;
+background-color: lightGray;
+display:none;
+}
+
+div.faq-content {
+padding:7px 8px 7px 13px;
+margin-top: 4px;
+margin-left:27px;
+background-color: lightGray;
+display:none;
+}
+
+div.grades-content {
+width:98%;
+overflow: auto;
+padding:0;
+margin-top: 4px;
+margin-left:27px;
+background-color: white;
+display:none;
+}
+
+
+#body-right .ssc-content {
+
+}
+
+/* center column */
+
+div#this-weeks-deadlines {
+float:left;
+margin:0 0 0 20px;
+padding:0 26px 0 0;
+width:390px;
+}
+
+/* right column */
+
+div#help-and-tutorials {
+margin:0 0 0 20px;
+}
+
+div#help-and-tutorials.list-vertical {
+float:left;
+width:197px;
+}
+
+div#help-and-tutorials.list-horizontal {
+margin-top:100px;
+}
+
+div#help-and-tutorials ul {
+margin:0px;
+}
+
+div#help-and-tutorials ul li {
+margin:0px 10px 10px 0px;
+}
+
+div#help-and-tutorials.list-vertical ul li {
+float:none;
+}
+
+div#help-and-tutorials.list-horizontal ul li {
+float:left;
+}
+
+div#help-and-tutorials a {
+text-decoration:underline;
+font-weight:bold;
+color:#000;
+}
+
+div#help-and-tutorials a:hover {
+text-decoration:none;
+}
+
+/* 2 column footer */
+
+div#footer {
+clear:left;
+color:#fff;
+background:transparent url(/static/ssc/images/footerBg.png) top left repeat-x;
+}
+
+div#footer-content {
+width:1000px;
+height:110px;
+margin:0 auto;
+}
+
+/* left column */
+
+div#footer-copyright {
+float:left;
+margin:40px 0 0 12px;
+}
+
+div#footer-copyright p {
+font-size:9px;
+margin:0;
+padding:0;
+color:#80a2d4;
+}
+
+/* right column */
+
+div#footer-menu {
+float:right;
+margin:40px 10px 0 0;
+}
+
+div#footer-menu ul {
+margin:0;
+padding:0;
+font-size:9px;
+list-style:none;
+}
+
+div#footer-menu ul li {
+margin:0;
+padding:0 2px 0 0;
+display:inline;
+}
+
+div#footer-menu ul li a {
+text-decoration: none;
+color:#fff;
+}
+
+div#footer-menu ul li a:hover {
+color:#d8a838;
+}
+
+/* footer warning messages area */
+
+div#footer-messages {
+clear:both;
+margin:0 0 0 12px;
+}
+
+div#footer-messages p {
+font-size:9px;
+padding:20px 0 0 0;
+margin:0;
+color:#80a2d4;
+}
+
+/* ----------------- login-landing specific pages ---------------- */
+
+div#landing-login-loginArea {
+width:1000px;
+height:333px;
+margin:35px auto 0 auto;
+padding:0px;
+}
+
+div#login-landing-input {
+float:left;
+width:450px;
+margin:100px 0 0 12px;
+}
+
+div#login-landing-input p {
+margin:0px;
+padding:0 150px 0 0;
+}
+
+div#landing-login-loginArea-left {
+float:left;
+width:180px;
+margin-top:15px;
+}
+
+div#landing-login-loginArea-right {
+float:right;
+width:250px;
+margin-top:15px;
+}
+
+div#landing-login-loginArea-left label {
+color:#d8a838;
+}
+
+div#landing-login-loginArea-left input {
+width:125px;
+height:23px;
+border:none;
+padding:3px 10px 0 3px;
+background:transparent url(../images/login-landing-input.gif) top left no-repeat;
+}
+
+div#landing-login-loginArea-left input#submit {
+width:87px;
+height:28px;
+border:none;
+background:none;
+margin:10px 0 0 0;
+padding:0px;
+}
+
+div#landing-login-loginArea-right p {
+margin:0px;
+padding:0px;
+}
+
+div#landing-login-loginArea-right a {
+color:#d8a838;
+}
+
+div#landing-login-loginArea-right a:hover {
+text-decoration: none;
+}
+
+div#login-landing-banner {
+float:right;
+width:499px; /* set width to whatever it needs to be */
+height:333px; /* height should notR change */
+}
+
+div#login-landing-content {
+width:1000px;
+margin:0 auto 0 auto;
+padding:0 0 40px 0;
+background: transparent url(/static/ssc/images/landing-login-three-col-bg.gif) repeat-y scroll 0 0;
+clear:both;
+}
+
+#login-landing#footer {
+color:#fff;
+background:transparent url(/static/ssc/images/footerBg.png) top left repeat-x;
+}
+
+/* --------------- Financial Summary Page ---------------- */
+
+div#financialSummary-content {
+width:1000px;
+margin:15px auto;
+}
+
+#body-right{
+background:transparent url(/static/ssc/images/financialSummary-rightSidebarBg.jpg) no-repeat scroll left top;
+float: right;
+padding:0px 5px;
+width: 180px;
+}
+
+#body-left {
+background:transparent url(/static/ssc/images/financialSummary-leftSidebarBg.jpg) top right no-repeat;
+float: left;
+padding:0px 5px;
+width: 180px;
+}
+
+li.faq-primary-selected {
+  background:transparent url(/static/ssc/images/financialSummary-sidebarArrows.png) 122px center no-repeat;
+}
+
+li.faq-secondary-selected {
+  background:transparent url(/static/ssc/images/financialSummary-sidebarArrows.png) 122px center no-repeat;
+}
+
+.faq-column {
+width:140px;
+min-width:140px;
+margin:0;
+padding: 0;
+background:transparent url(/static/ssc/images/financialSummary-leftSidebarBg.jpg) top right no-repeat;
+}
+
+#body-main {
+padding:15px 10px;
+width:580px;
+float:left;
+}
+
+#body-content {
+padding:20px 10px;
+width:670px;
+float:left;
+}
+
+#body-content.in-pasbc {
+width:670px !important;
+}
+
+#body-content.not-pasbc {
+width:560px !important;
+}
+
+/* ---------- breadcrumb menu --------- */
+#breadcrumb-menu {
+margin:0;
+padding: 0 15px 0 15px;
+}
+
+#breadcrumb-menu h1 {
+margin:1em 0 0.5em 0;
+}
+
+#breadcrumb-menu ul {
+margin:0;
+padding:0;
+list-style:none;
+border-top: thin solid lightGrey;
+}
+
+#breadcrumb-menu li {
+background:transparent url(/static/ssc/images/breadcrumb-arrows.png) no-repeat scroll left 4px;
+border-bottom:thin solid lightGrey;
+color:#002859;
+font-size:12px;
+padding:5px 0 5px 20px;
+float:left;
+width:170px;
+}
+
+#breadcrumb-menu li a {
+color:#002859;
+font-size:12px;
+text-decoration:none;
+}
+
+#breadcrumb-menu li a:hover {
+color:#d8a737;
+}
+
+#breadcrumb-menu .currentMenu {
+    color:#d8a737;
+}
+
+#breadcrumb-menu li a.warningMenu {
+    background:transparent url(/static/shared/images/warning.gif) no-repeat scroll left top;
+    padding-left:20px;
+}
+
+/* ---------- left side menu --------- */
+
+#body-left ul {
+margin:0;
+padding:0;
+list-style:none;
+}
+
+.faq-column ul {
+margin:0;
+padding:0;
+list-style:none;
+min-width: 140px;
+}
+
+#body-left li {
+background:transparent url(/static/ssc/images/financialSummary-sidebarArrows.png) no-repeat scroll left 6px;
+border-top:thin solid lightGrey;
+color:#0044A9;
+font-size:12px;
+padding:5px 0 5px 21px;
+}
+
+.faq-column li {
+border-top:thin solid lightGrey;
+color:#0044A9;
+font-size:12px;
+padding:5px 15px 5px 5px;
+}
+
+#body-left li a {
+color:#0044A9;
+font-size:12px;
+text-decoration:none;
+}
+
+#body-left li a:hover {
+color:#d8a737;
+}
+
+.faq-column li a {
+color:#0044A9;
+font-size:12px;
+text-decoration:none;
+}
+
+.faq-column li a:hover {
+color:#d8a737;
+}
+
+#body-left .currentMenu {
+    color:#d8a737;
+}
+
+#body-left ul li ul {
+margin:0;
+padding:0;
+}
+
+#body-left ul li ul li {
+margin:7px 0 7px 0;
+padding:0;
+background:none;
+border-top: none;
+}
+
+.faq-column ul li ul {
+margin:0;
+padding:0;
+}
+
+.faq-column ul li ul li {
+margin:7px 0 7px 0;
+padding:0;
+background:none;
+border-top: none;
+}
+
+#body-left ul li ul li.financialSummary-firstSubLi {
+margin:8px 0 13px 0;
+}
+
+#body-left ul li ul li.financialSummary-lastSubLi {
+margin:10px 0 18px 0;
+}
+
+#body-left ul li ul li a {
+color:#777777;
+}
+
+/* ---------- main content area ----------- */
+
+ul#financialSummary-yfs {
+margin-bottom:15px;
+}
+
+#body-main h2 {
+font-size:17px;
+font-weight: normal;
+color:#0045aa;
+margin:15px 0 5px 0;
+padding-top:5px;
+}
+
+#body-main h3 {
+font-size:13px;
+font-weight:normal;
+margin:0px;
+}
+
+#body-main p.pFloatRight {
+float:right;
+margin:-23px 0 0 0;
+padding:0px;
+}
+
+#body-main table {
+clear:right;
+width:100%;
+}
+
+#body-main table thead tr {
+background:#d4d4d4;
+}
+
+#body-main table tr {
+border-bottom:1px solid #dbdbdb;
+height:43px;
+}
+
+#body-main table thead tr {
+height:30px;
+border-bottom:1px solid #dbdbdb;
+}
+
+#body-main table thead th {
+color:#fff;
+font-weight:normal;
+text-align:center;
+}
+
+#body-main table tr.odd {
+background:#f5f5f5;
+}
+
+#body-main table tr.even {
+background:#fff;
+}
+
+#body-main table th#date {
+width:106px;
+}
+
+#body-main table th#description {
+width:227px;
+}
+
+#body-main table th#debit {
+width:98px;
+}
+
+#body-main table th#credit {
+width:98px;
+}
+
+#body-main table td {
+text-align:center;
+}
+
+#body-main table td.description {
+text-align: left;
+}
+
+#body-main table td.description a {
+font-size:9px;
+text-decoration: underline;
+}
+
+#body-main table td p.financialSummary-dueOn {
+font-size:9px;
+color:#ff0000;
+padding:0px;
+margin-bottom:0px;
+}
+
+/* ------- personal info page --------- */
+
+div#personalInfo-content {
+width:1000px;
+margin:15px auto;
+}
+
+div.personalInfo-sidebar {
+float:left;
+width:207px;
+height:578px;
+margin:0;
+padding:0;
+background:transparent url(/static/ssc/images/personalInfo-sidebarBg.jpg) top right no-repeat;
+}
+
+.personalInfo-sidebar ul {
+margin:0 0 0 13px;
+padding:0;
+list-style:none;
+}
+
+.personalInfo-sidebar li {
+margin:0 0 0 15px;
+padding:0 0 15px 20px;
+font-size:12px;
+color:#0044a9;
+background:transparent url(/static/ssc/images/financialSummary-sidebarArrows.png) top left no-repeat;
+}
+
+.personalInfo-sidebar li.personalInfo-second {
+margin-bottom:1px;
+}
+
+.personalInfo-sidebar li.personalInfo-third, .personalInfo-sidebar li.personalInfo-fourth {
+margin-bottom:2px;
+}
+
+.personalInfo-sidebar li a {
+font-size:12px;
+text-decoration: none;
+color:#0044a9;
+}
+
+.personalInfo-sidebar li a:hover {
+color:#d8a737;
+}
+
+div.personalInfo-main {
+float:left;
+width:512px;
+margin:0 40px 0 40px;
+}
+
+.personalInfo-main h2 {
+font-size:17px;
+font-weight: normal;
+color:#0045aa;
+margin:0 ;
+padding-top:0;
+}
+
+/* Personal Info content swticher*/
+
+#contactInfoMenu{
+  list-style:none;
+  padding:0;
+  margin:24px 0 0;
+  height:30px;
+}
+
+#contactInfoMenu li{
+  float:left;
+  padding:4px 6px;
+  margin-right:6px;
+  background-color:#CCC;
+  color:#FFF;
+}
+
+#contactInfoMenu li.active{
+  background-color:#FFF;
+  color:#CCC;
+  border:1px solid #CCC;
+  border-bottom:0;
+}
+
+#contactInfoMenu li a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.contentArea{
+  border:1px solid #CCC;
+  padding:12px;
+  display:none;
+}
+
+.contentArea.active{
+  display:block;
+}
+
+a.modalCloseX {
+color:white;
+font-size:14px;
+font-weight:bold;
+position:absolute;
+right:6px;
+text-decoration:none;
+top:0;
+}
+
+.modalMain {
+  margin:0;
+  padding:0;
+}
+
+.modalContent {
+  margin:0;
+  padding:0;
+}
+
+.modalTitle {
+  background-color: #0045a9;
+  padding: 4px;
+  margin: 0;
+  border: none;
+  font-size: 14px;
+  width:99%;
+  color:white;
+  font-weight: bold;
+}
+
+.child-column {
+  display:none;
+}
+
+.child-faq-column {
+  display:none;
+}
+
+.show-child {
+  display:block;
+}
+
+.show-child-faq {
+  display:block;
+}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000; cursor:wait;}
+
+/* Container */
+#simplemodal-container {min-height:400px; width:600px; background-color:white; border:3px solid lightgray ; padding:0;}
+
+
+.hidden {
+    display: none;
+}
+.substep {
+    overflow-x: auto;
+    overflow-y: auto;
+}

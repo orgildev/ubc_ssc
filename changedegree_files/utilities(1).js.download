@@ -1,0 +1,52 @@
+var version4 = (navigator.appVersion.charAt(0) == "4");
+var popupHandle;
+
+function closePopup() {
+    if(popupHandle != null && !popupHandle.closed) popupHandle.close();
+}
+
+function popupWindow(url, width, height, evnt) {
+   var properties = "toolbar=0, location=0, height=" + height;
+   properties = properties + ", width=" + width;
+   var leftprop, topprop, screenX, screenY, cursorX, cursorY, padAmt;
+   if(navigator.appName == "Microsoft Internet Explorer") {
+      screenY = document.body.offsetHeight;
+      screenX = window.screen.availWidth;
+   }
+   else {
+      screenY = window.outerHeight
+      screenX = window.outerWidth
+   }
+   cursorX = evnt.screenX;
+   cursorY = evnt.screenY;
+   padAmtX = 10; //NOSONAR Global Variable
+   padAmtY = 10; //NOSONAR Global Variable
+
+   if((cursorY + height + padAmtY) > screenY) {
+      // make sizes a negative number to move left/up
+      padAmtY = (-30) + (height * -1);
+      // if up or to left, make 30 as padding amount
+   }
+   if((cursorX + width + padAmtX) > screenX)	{
+      padAmtX = (-30) + (width * -1);
+      // if up or to left, make 30 as padding amount
+   }
+   if(navigator.appName == "Microsoft Internet Explorer") {
+      leftprop = cursorX + padAmtX;
+      topprop = cursorY + padAmtY;
+   }
+   else {
+      leftprop = cursorX  + padAmtX;
+      topprop = cursorY + padAmtY;
+   }
+   if(evnt != null) {
+      properties = properties + ", left=" + leftprop;
+      properties = properties + ", top=" + topprop;
+   }
+   closePopup();
+   popupHandle = window.open(url,'Help',properties);
+}
+
+function openBareScrollingWindow(id, url, width, height) {
+   window.open(url,id, "status=no,resizable=yes,scrollbars=yes,toolbar=no,WIDTH="+width+",HEIGHT="+height)
+}

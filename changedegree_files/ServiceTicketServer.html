@@ -1,0 +1,448 @@
+
+<!-- saved from url=(0061)https://ssc.adm.ubc.ca/admissions/function/modifyapplications -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>UBC Student Service Centre - UBC Admissions</title>
+      <link rel="stylesheet" href="./studentServiceCentre.css" type="text/css">
+      <script language="JavaScript" src="./jquery.js.download" type="text/javascript"></script>
+      <script language="JavaScript" src="./init.js.download"></script>
+		<script type="text/javascript">
+			function gotoAnchor() {
+				
+				
+			}
+      function next(){
+        document.forms[0].userEvent.value = "HANDLE_BBA";
+        document.forms[0].submit();
+      }
+		</script>
+  </head>
+  <body onload="gotoAnchor(); toggleAborChoices();"><div id="printer" onclick="printWindow()" class="noPrint">Print</div><div id="header-invisible" class="onlyPrint"><div><img src="./ubc_print_header.png" alt="UBC"></div><div id="printingInfo" style="color: black; top:2px; right:0; text-align: right;"><b>Name:</b><span id="studName">&nbsp;</span>&nbsp;&nbsp;&nbsp;<b>#:</b><span id="studNo">&nbsp;</span>&nbsp;&nbsp;&nbsp;<b>Date:</b><span id="currentDate">&nbsp;</span></div></div>
+    <script type="text/javascript">
+    <!--
+      //variable used to force the javascripts below to pull their resources from within this application context...
+      var appl_context='/admissions';
+    // -->
+    </script>
+    <!-- Start Page -->
+    <table cellspacing="0" cellpadding="0" style="width: 100%;" align="center" border="0">
+    <!-- Page Title -->
+      <tbody>
+        <tr>
+          <td class="pageTitle">Change Degree Program/Campus</td>
+        </tr>
+
+        <!-- Page Content -->
+        <tr>
+          <td class="pageContent">
+            <div class="infoMessage">This functionality is no longer supported in the SSC (Student Service Centre). Please use the Applicant Service Centre to perform this task.</div>
+            <!-- output errors if they exist -->
+            
+
+            <!-- Instructions -->
+            <div class="infoMessage">
+<br>
+<b>The application for program changes is currently closed. You can apply to change your degree program on the <a href="https://myapplication.ubc.ca/" target="_blank">UBC Applicant Service Centre</a>.</b>
+<br>
+<br><br>
+                </div>
+            <!-- END Instructions -->
+
+            <form method="post" action="https://ssc.adm.ubc.ca/admissions/function/modifyapplications" name="mainForm">
+              <input type="hidden" name="PAGE_SOURCE" value="readmittransfer.facultytransfer">
+              <input type="hidden" name="userEvent" value="">
+
+              <!-- Program Session choices -->
+              
+
+
+
+
+
+
+
+
+
+
+<!-- page containing the first and second choices for readmit and facultytransfer-->
+<script type="text/javascript" src="./utilities(1).js.download"></script>
+<script type="text/javascript">
+
+    var optionsArray = new Array(7);
+ optionsArray[0] = "BHK   ";
+ optionsArray[1] = "BSN-O ";
+ optionsArray[2] = "MENG  ";
+ optionsArray[3] = "BFA-O ";
+ optionsArray[4] = "BSF   ";
+ optionsArray[5] = "BFA   ";
+ optionsArray[6] = "BEDS  ";
+
+    function resetAndCheckOptions(index, toExclude, code){
+        resetChoices(index, toExclude);
+        checkOptions(code, index);
+        reflectChanges();
+    }
+
+    function resetAndCheckGradOptions(index, toExclude, code) {
+        resetChoices(index, toExclude);
+        checkGradOptions(code, index);
+        reflectChanges();
+    }
+
+    function checkOptions(code, index){
+        for (i=0; i < optionsArray.length; i++){
+            if (code == optionsArray[i]){
+                show('applicationInfoHelper.showOption',index);
+                //submit to server to populate
+                reflectChanges();
+                return;
+            }
+        }
+        //reset drop down to nothing
+        var choicesDD = "applicationInfoHelper.degreeOptionChoiceCode["+index+"]";
+        var dropdown = document.forms[0].elements[choicesDD];
+        resetDropDown(dropdown);
+    }
+
+    function checkGradOptions(code, index){
+        for (i=0; i < optionsArray.length; i++){
+            if (code == optionsArray[i]){
+                show('applicationInfoHelper.showGradOption',index);
+                //submit to server to populate
+                reflectChanges();
+                return;
+            }
+        }
+        //reset drop down to nothing
+        var choicesDD = "applicationInfoHelper.graduateProgramOptionChoiceCode["+index+"]";
+        var dropdown = document.forms[0].elements[choicesDD];
+        resetDropDown(dropdown);
+    }
+
+    function resetOthrChoices(index, toExclude) {
+        resetChoices(index, toExclude);
+        reflectChanges();
+
+    }
+
+    function resetChoices(index, toExclude){
+        var ddChoices = new Array(4);
+        ddChoices[0] = "applicationInfoHelper.degreeChoiceCode["+index+"]";
+        ddChoices[1] = "applicationInfoHelper.certificateChoiceCode["+index+"]";
+        ddChoices[2] = "applicationInfoHelper.diplomaChoiceCode["+index+"]";
+        ddChoices[3] = "applicationInfoHelper.graduateProgramChoiceCode["+index+"]";
+        var cbChoices = new Array(2);
+        cbChoices[0] = "applicationInfoHelper.unclassifiedChoiceCode["+index+"]";
+        cbChoices[1] = "applicationInfoHelper.visitorChoiceCode["+index+"]";
+
+        optionsChoice = "applicationInfoHelper.degreeOptionChoiceCode["+index+"]";
+        gradOptionsChoice = "applicationInfoHelper.graduateProgramOptionChoiceCode["+index+"]";
+
+        hide('applicationInfoHelper.showOption',index);
+        hide('applicationInfoHelper.showGradOption',index);
+
+        for (i =0; i < ddChoices.length; i++){
+            if (toExclude != ddChoices[i] && document.forms[0].elements[ddChoices[i]] != null){
+                document.forms[0].elements[ddChoices[i]].selectedIndex = 0;
+            }
+        }
+
+        for (i =0; i < cbChoices.length; i++){
+            if (toExclude != cbChoices[i]){
+                var cb = document.forms[0].elements[cbChoices[i]];
+                if(cb != null) cb.checked = false;
+            }
+        }
+
+        if (document.forms[0].elements[ddChoices[0]].selectedIndex == 0){
+            resetDropDown(document.forms[0].elements[optionsChoice]);
+        }
+
+        if (document.forms[0].elements[ddChoices[3]] != null && document.forms[0].elements[ddChoices[3]].selectedIndex == 0){
+            resetDropDown(document.forms[0].elements[gradOptionsChoice]);
+        }
+    }
+
+    //shows corresponding div
+    function show(divId, index) {
+        var hiddenField = divId+"["+index+"]";
+        divId += index;
+        if (document.all){
+            document.all[divId].style.display = 'block';
+            document.all[hiddenField].value = true;
+        }else if (document.layers){
+            document.layers[divId].display = 'block';
+            document.layers[hiddenField].value ="true";
+        }else if (document.getElementById){
+            document.getElementById(divId).style.display = 'block';
+            document.getElementById(hiddenField).value ="true";
+        }
+    }
+
+    function hide(divId, index) {
+        var hiddenField = divId+"["+index+"]";
+        divId += index;
+        if (document.all){
+            document.all[divId].style.display = 'none';
+            document.all[hiddenField].value = false;
+        } else if (document.layers){
+            document.layers[divId].display = 'none';
+            document.layers[hiddenField].value ="false";
+        } else if (document.getElementById){
+            document.getElementById(divId).style.display = 'none';
+            document.getElementById(hiddenField).value = "false";
+        }
+    }
+
+    function reflectChanges(){
+        document.forms[0].userEvent.value = "USEREVENT_REFLECT_CHANGES";
+        document.forms[0].submit();
+    }
+
+    function resetDropDown(dropdown){
+        if (dropdown.options != null) {
+            dropdown.options.length = 1;
+            dropdown.options[0] = new Option('N/A');
+            dropdown.options[0].value = '';
+            dropdown.options[0].selected = true;
+        }
+    }
+
+    function addAnotherChoice(){
+        document.forms[0].userEvent.value = "USEREVENT_ADD_CHOICE";
+        document.forms[0].submit();
+    }
+
+    function removeLastChoice(){
+        document.forms[0].userEvent.value = "USEREVENT_DEL_CHOICE";
+        document.forms[0].submit();
+    }
+</script>
+
+<a name="anchor">
+    
+        <!-- begin category -->
+        <table cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+            <tbody><tr>
+                
+                    
+                        <td class="formHeader">First Program Selection</td>
+                    
+                    
+                
+                <td class="formHeader" align="right">* Required</td>
+            </tr>
+            <tr>
+                <td class="formFields" colspan="2">
+                    <table cellspacing="0" cellpadding="2" border="0" width="100%">
+                        <!-- Campus location -->
+                        <tbody><tr>
+                            <td align="left">Campus:*</td>
+                            <td align="left"><input type="radio" value="true" name="applicationInfoHelper.campus[0]" onclick="javascript:reflectChanges()"> Vancouver
+                                <input type="radio" value="false" name="applicationInfoHelper.campus[0]" onclick="javascript:reflectChanges()"> Okanagan
+                            </td>
+                        </tr>
+                        <!-- end Campus location -->
+
+                        <tr><td class="borderTop" colspan="2">Please choose only <b>one</b> of the following:*</td></tr>
+
+                        <!-- degree program-->
+                        <tr>
+                            <td class="formField" width="160"><b>Degree:</b></td>
+                            <td width="444">
+                                <select id="applicationInfoHelper.degreeChoiceCode[0]" name="applicationInfoHelper.degreeChoiceCode[0]" onchange="javascript:resetAndCheckOptions(&#39;0&#39;, this.id, this.value)">
+                                    
+                                        
+                                        
+                                            
+                                                <option value="">
+                                                    
+                                                </option>
+                                            
+                                                <option value="BASC-O">
+                                                    Bachelor of Applied Science - B.A.Sc.
+                                                </option>
+                                            
+                                                <option value="BA-O  ">
+                                                    Bachelor of Arts - B.A.
+                                                </option>
+                                            
+                                                <option value="BEDA-O">
+                                                    Bachelor of Education - B.Ed Teaching Adolescents
+                                                </option>
+                                            
+                                                <option value="BEDC-O">
+                                                    Bachelor of Education - B.Ed Teaching Children
+                                                </option>
+                                            
+                                                <option value="BFA-O ">
+                                                    Bachelor of Fine Arts - B.F.A.
+                                                </option>
+                                            
+                                                <option value="BHES-O">
+                                                    Bachelor of Health and Exercise Sciences - B.H.E.S.
+                                                </option>
+                                            
+                                                <option value="BMGT-O">
+                                                    Bachelor of Management - B.Mgt.
+                                                </option>
+                                            
+                                                <option value="BMS-O ">
+                                                    Bachelor of Media Studies - B.M.S.
+                                                </option>
+                                            
+                                                <option value="BSC-O ">
+                                                    Bachelor of Science - B.Sc.
+                                                </option>
+                                            
+                                                <option value="BSN-O ">
+                                                    Bachelor of Science in Nursing - B.S.N.
+                                                </option>
+                                            
+                                                <option value="BSUS-O">
+                                                    Bachelor of Sustainability - B.Sust.
+                                                </option>
+                                            
+                                        
+                                    
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- end degree program -->
+                    </tbody></table>
+
+                    <!-- degreeOptionChoice -->
+                    
+                    
+                    <div style="DISPLAY:none" id="applicationInfoHelper.showOption0" align="left">
+                        
+                        
+                            
+                            <table cellspacing="0" cellpadding="2" border="0" width="100%">
+                                <tbody><tr>
+                                    <td width="160">&nbsp;</td>
+                                    <td width="444">
+                                        <select id="applicationInfoHelper.degreeOptionChoiceCode[0]" name="applicationInfoHelper.degreeOptionChoiceCode[0]">
+                                            
+                                                
+                                                    <option value="">N/A</option>
+                                                
+                                                
+                                            
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <!-- end degreeOptionChoice -->
+
+                        
+
+                        <!-- gradDegreeOptionChoice -->
+                        
+                        
+                        <div style="DISPLAY:none" id="applicationInfoHelper.showGradOption0" align="left">
+                            
+                            
+                                
+                                <table cellspacing="0" cellpadding="2" border="0" width="100%">
+                                    <tbody><tr>
+                                        <td width="160">&nbsp;</td>
+                                        <td width="444">
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            <!-- end gradDegreeOptionChoice -->
+
+                            <!-- visitor and unclassified Studies -->
+                            
+                            <!-- end visitor and unclassified Studies -->
+
+                            <!-- Enrolment in -->
+                            <table cellspacing="0" cellpadding="2" width="100%" style="border-top: #C0C0C0 1px solid">
+                                <tbody><tr>
+                                    <td align="left">I intend to enrol in:*</td>
+                                    <td align="left"><input type="radio" value="true" checked="" name="applicationInfoHelper.onCampus[0]" onclick="javascript:reflectChanges()"> on-campus courses
+                                    </td>
+                                </tr>
+                                <!-- End Enrolment in -->
+
+                                <!-- Attending in -->
+                                <tr>
+                                    <td align="left">I wish to start attending in:*</td>
+                                    <td align="left">
+                                        
+                                            <select id="applicationInfoHelper.sessions[0]" name="applicationInfoHelper.sessions[0]">
+                                            
+                                                
+                                                    
+                                                        <option value="">
+                                                            
+                                                        </option>
+                                                    
+                                                
+                                                
+                                            
+                                        </select>
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <!-- End Attending in -->
+                            </tbody></table>
+                </td>
+            </tr>
+        </tbody></table>
+
+        <!-- end cateogry choices -->
+        <br><br>
+
+        <!-- hidden fields for saving state of show/hide fields==-->
+        <input type="hidden" name="applicationInfoHelper.showOption[0]" id="applicationInfoHelper.showOption[0]" value="false">
+        <input type="hidden" name="applicationInfoHelper.showGradOption[0]" id="applicationInfoHelper.showGradOption[0]" value="false">
+    
+</a>
+
+<table cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+    <tbody><tr>
+        <td align="left">
+            
+                
+                
+                    <input type="button" size="30" class="button button" value="Add Second Program" onclick="javascript:addAnotherChoice()">
+                
+            
+        </td>
+    </tr>
+</tbody></table>
+
+<br><br>
+
+              <!-- END Program Session choices -->
+
+              <br><br>
+              <!-- Buttons -->
+              <table cellspacing="0" cellpadding="0" border="0" width="90%" align="center">
+                <tbody><tr>
+                  <td align="middle" width="50%" class="formActionButtons">
+                  
+                    <input type="button" value="Next" disabled="">
+
+                  </td>
+                </tr>
+              </tbody></table>
+              <!-- END Buttons -->
+            </form>
+            <br><br>
+            <!-- End Page Content -->
+          </td>
+        </tr>
+        <!-- End Page -->
+      </tbody>
+    </table>
+
+
+  
+
+</body></html>

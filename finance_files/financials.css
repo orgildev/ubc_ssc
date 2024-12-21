@@ -1,0 +1,30 @@
+.front-page-primary {
+  border: thin black solid;
+  margin-right: 1em;
+  background: lightgray;
+  width: 280px;
+  height: 80px;
+  margin-bottom: 1em;
+  padding: .5em .5em .5em .5em;
+  overflow: hidden;
+}
+
+.front-page-secondary {
+  border: thin black solid;
+  margin-right: 1em;
+  background: darkgray;
+  width: 280px;
+  height: 80px;
+  margin-bottom: 1em;
+  padding: .5em .5em .5em .5em;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.payment-div {
+}
+
+

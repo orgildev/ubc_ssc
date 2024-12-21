@@ -1,0 +1,51 @@
+var today = new Date();
+var todayDay = today.getDay();
+var todayMonth = today.getMonth();
+
+function getCalendarDay(day) {
+    var dow = new Array(7)
+    dow[0] = "Sunday"
+    dow[1] = "Monday"
+    dow[2] = "Tuesday"
+    dow[3] = "Wednesday"
+    dow[4] = "Thursday"
+    dow[5] = "Friday"
+    dow[6] = "Saturday"
+    return dow[day]
+}
+
+function getCalendarMonth(month) {
+    var moy = new Array(12)
+    moy[0] = "January"
+    moy[1] = "February"
+    moy[2] = "March"
+    moy[3] = "April"
+    moy[4] = "May"
+    moy[5] = "June"
+    moy[6] = "July"
+    moy[7] = "August"
+    moy[8] = "September"
+    moy[9] = "October"
+    moy[10] = "November"
+    moy[11] = "December"
+    return moy[month]
+}
+
+if (document.domain != "ubc.ca") {
+
+if (typeof appl_context == 'undefined') { //NOSONAR Global Variable
+  //if no appl_context has been declared then we will load the static pieces from the defualt app.
+  //otherwise we can load from the appl_context itself.
+  var appl_context = '';
+}
+document.write(' <table cellpadding="0" cellspacing="0" border="0" width="100%">');
+document.write(' <tr>');
+document.write(' <td align="left" valign="top" width="260">&nbsp;');
+document.write( getCalendarDay(todayDay) + ' ' + getCalendarMonth(todayMonth) + ' ' + today.getDate() + ', ' + today.getFullYear() );
+document.write(' </td>');
+document.write(' <td align="left" id="userInfo" valign="top">&nbsp;</td>');
+document.write(' <td align="right" valign="top"><a href="javascript:parent.close()"><img src="' + appl_context + '/static/shared/images/closeWindow.gif" align="absmiddle" border="0"/> Close Window </a></td>');
+document.write(' </tr>');
+document.write(' </table><br><br>');
+
+}

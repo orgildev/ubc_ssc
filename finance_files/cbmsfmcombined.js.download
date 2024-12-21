@@ -1,0 +1,190 @@
+
+function setParentHighlight(idToHighlight) {
+  window.parent.$("li.currentMenu").removeClass("currentMenu");
+  window.parent.$("#" + idToHighlight).addClass("currentMenu");
+}
+
+function showPaymentType(divToShow) {
+  $("div.payment-div").addClass("hidden");
+  $("div#" + divToShow).removeClass("hidden");
+}
+
+function validatePaymentMethod() {
+  var submitForm = $("input[@name='paymenttype']:checked").val();
+  if (submitForm == "EFT") {
+    var ids=new Array('other_bank_number','bank_transit','bank_account','account_holder_name');
+    var regexps = new Array(/^\d{3}$/,/^\d{5}$/,/^\d{5,12}$/,/^[A-Za-z0-9\s\-]{2,50}$/);
+    var msgs = new Array(
+        "You must enter a Bank Number consisting of 3 digits (eg. 123).",
+        "You must enter a Bank Transit consisting of 5 digits (eg. 00002).",
+        "You must enter a Bank Account consisting of 5-12 digits (eg. 1234567).",
+        "You must enter a Account Holder consisting of 2-50 characters (eg. John Smith)."
+      );
+    return validateForm(ids,regexps,msgs);
+  } else if (submitForm == "CCRD") {
+    var ids=new Array('cardnumber','cardcvd','cardowner','expirymonth','expiryyear');
+    var regexps = new Array(/^\d{16}$/,/^\d{3,4}$/,/^[A-Za-z0-9\s\-]{2,50}$/,/^\d{2}$/,/^\d{4}$/);
+    var msgs = new Array(
+        "You must enter a Credit Card Number consisting of 16 digits (eg. 123).",
+        "You must enter a Credit Card CVD consisting of 3-4 digits (eg. 00002).",
+        "You must enter a Name consisting of 2-50 characters (eg. Jane Smith).",
+        "You must select the expiry month.",
+        "You must select the expiry year."
+      );
+    return validateForm(ids,regexps,msgs);
+  }    
+  return true;
+}
+
+function validateForm(ids, regexps, msgs) {
+  for (let i=0; i<ids.length; i++) {
+    var inputName = ids[i];
+    var regexp = regexps[i];
+    var msg = msgs[i];
+    var elm = $("[name='" + inputName + "']" );
+    if (elm) {
+      var elmValue = elm.val();
+      if (!(elmValue && elmValue.match(regexp))) {
+        alert (msg);
+        var type = elm.get(0).type;
+        elm.get(0).focus();
+        if (type == "text" || type == "textarea") {
+          elm.get(0).select();
+        }
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+function toggleAmount(itemID, totalAmount, parentID, childID) {
+  var elmTD = $("#td" + itemID).get(0);
+  var elmINPUT = $("#input" + itemID).get(0);
+  var amount = elmINPUT.value.replace(/\$/,'');;
+  if (amount == "0.00") {
+    elmINPUT.value = totalAmount;
+    elmTD.innerHTML = '$' + totalAmount;
+    checkParent(parentID);
+  } else {
+    elmINPUT.value = "0.00";
+    elmTD.innerHTML = "$0.00";
+    uncheckChild(childID);
+  }
+  cbmCalculator();
+}
+
+function checkParent(parentID) {
+  var parentCB = $("#cb" + parentID).get(0);
+  if (!parentCB) {
+    var parentIT = $("#it" + parentID).get(0);
+    if (parentIT) {
+        $(parentIT).val($(parentIT).attr("maxValue"));
+        checkParent($(parentIT).attr("parentId"));
+    }
+  } else if (!parentCB.checked) {
+        $(parentCB).click();
+  }
+}
+
+function uncheckChild(childID) {
+  var childCB = $("#cb" + childID).get(0);
+  if (!childCB) {
+    var childIT = $("#it" + childID).get(0);
+    if (childIT) {
+      $(childIT).val("0.00");
+  	  uncheckChild($(childIT).attr("childId"));
+    }
+  } else if (childCB.checked) {
+    $(childCB).click();
+  }
+}
+
+function hasZeroItem() {
+  var zeroCount=0;
+  $(".inputamount").each(
+    function(i) {
+        if (0 === this.value * 1) {
+			zeroCount++;
+		}
+    }
+  );
+	console.log('hasZeroItem: zeroCount='+zeroCount);
+  return 0!==zeroCount;
+}
+
+function inputSum() {
+  var total = 0.0;
+  $(".inputamount").each(
+    function(i) {
+      total += this.value * 1;
+    }
+  );
+ 	console.log('inputSum='+total);
+  return total;
+}
+
+function cbmCalculator() {
+  $("#totalamountentered-span").html(format(inputSum()));
+}
+
+function format(x) {
+  var y = Math.round(x*100)/100;
+  return y.toFixed(2);
+}
+
+// Creates a fixed size pop-up window without status, scroll/toolbars
+function openBareWindow(id, url, width, height) {
+   window.open(url,id, "status=no,resizable=no,scrollbars=no,toolbar=no,WIDTH="+width+",HEIGHT="+height)
+}
+
+// Creates a full screen scrollable window without status, scroll/toolbars
+function openBareFullscreenWindow(id, url) {
+   window.open(url, id, "status=no,resizable=yes,scrollbars=yes,toolbar=no,HEIGHT="+screen.height+",WIDTH="+screen.width)
+}
+
+// Creates a pop-up window without status, toolbars but with scroll.
+function openBareScrollingWindow(id, url, width, height) {
+   window.open(url,id, "status=yes,resizable=yes,scrollbars=yes,toolbar=yes,WIDTH="+width+",HEIGHT="+height)
+}
+
+function popupTerms() {
+    $("#accountNumber").html($("#bank_account").attr("value"))
+    parent.$("body").append($("#bankingInfoTerms"));
+    parent.$("#bankingInfoTerms").modal();
+}
+
+function bankNameChanged() {
+  var dropDown = $("#selectbank_name").get(0)
+  $("#inputother_bank_number").val(dropDown.value);
+  $("#hiddenother_bank_number").val(dropDown.value);
+  $("#hiddenbank_name").val(dropDown.options[dropDown.selectedIndex].text.toUpperCase());
+  if (dropDown.value == '   ') {
+    $("#inputother_bank_number").removeAttr("disabled");
+    $("#inputother_bank_number").get(0).focus();
+    $("#inputother_bank_number").get(0).select();
+  } else {
+    $("#inputother_bank_number").attr("disabled",true);
+    $("#inputbank_transit").get(0).focus();
+  }
+}
+
+function setHiddenValue() {
+  $("#hiddenother_bank_number").val($("#inputother_bank_number").val());
+  return true;
+}
+function updateBankName(bankName) {
+	var bankNo = parseInt($("#inputother_bank_number").val());
+	$("#hiddenother_bank_number").val($("#inputother_bank_number").val());
+	var bankNameOptions = $("#selectbank_name").get(0).options;
+	for (var i=0; i<bankNameOptions.length; i++) {
+		var option = bankNameOptions[i];
+		var text = option.text.toUpperCase();
+	    if (bankNo == parseInt(option.value) && ( bankName === "" || bankName === text || bankName === 'THE '+text)) {
+	        bankNameOptions[i].selected = true;
+	        bankNameChanged();
+	        return;
+	    }
+	}
+}
