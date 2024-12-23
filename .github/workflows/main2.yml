@@ -1,0 +1,29 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  run_pull:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Debug Secrets
+      run: |
+        echo "SSH_HOST: ${{ secrets.SSH_HOST }}"
+        echo "SSH_USER: ${{ secrets.SSH_USER }}"
+        echo "WORK_DIR: ${{ secrets.WORK_DIR }}"
+        echo "MAIN_BRANCH: ${{ secrets.MAIN_BRANCH }}"
+
+    - name: Install SSH Keys
+      run: |
+        install -m 600 -D /dev/null ~/.ssh/id_rsa
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+    - name: Connect and Pull
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
