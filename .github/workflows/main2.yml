@@ -31,14 +31,14 @@ jobs:
           sudo chown -R ${{ secrets.SSH_USER }}:${{ secrets.SSH_USER }} /var/www/ubc_ssc &&
           sudo chmod -R 755 /var/www/ubc_ssc"
         
-    - name: Connect and Pull
+    - name: Reset Repository and Pull Latest Changes
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }} "
-          sudo -u ${{ secrets.SSH_USER }} -H bash -c '
-            cd /var/www/ubc_ssc &&
-            git checkout ${{ secrets.MAIN_BRANCH }} &&
-            git pull &&
-            exit'
-        "
+          cd /var/www/ubc_ssc &&
+          git fetch --all &&
+          git reset --hard origin/${{ secrets.MAIN_BRANCH }} &&
+          git clean -fdx &&
+          exit"
+        
     - name: Cleanup
       run: rm -rf ~/.ssh
