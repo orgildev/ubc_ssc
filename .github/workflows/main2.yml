@@ -13,17 +13,18 @@ jobs:
     steps:
     - name: Debug Secrets
       run: |
-        echo "SSH_HOSTNAME: ${{ secrets.SSH_HOSTNAME }}"
-        echo "SSH_USER: ${{ secrets.SSH_USER }}"
-        echo "WORK_DIR: ${{ secrets.WORK_DIR }}"
-        echo "MAIN_BRANCH: ${{ secrets.MAIN_BRANCH }}"
+        sudo echo "SSH_HOSTNAME: ${{ secrets.SSH_HOSTNAME }}"
+        sudo echo "SSH_USER: ${{ secrets.SSH_USER }}"
+        sudo echo "WORK_DIR: ${{ secrets.WORK_DIR }}"
+        sudo echo "MAIN_BRANCH: ${{ secrets.MAIN_BRANCH }}"
 
     - name: Install SSH Keys
       run: |
-        install -m 600 -D /dev/null ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SSH_HOSTNAME }} >> ~/.ssh/known_hosts
+        sudo install -m 600 -D /dev/null ~/.ssh/id_rsa
+        sudo echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        sudo chmod 600 ~/.ssh/id_rsa
+        sudo ssh-keyscan -H ${{ secrets.SSH_HOSTNAME }} >> ~/.ssh/known_hosts
 
     - name: Connect and Pull
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }} "sudo cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
+      run: |
+        sudo ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }} "sudo cd ${{ secrets.WORK_DIR }} && sudo git checkout ${{ secrets.MAIN_BRANCH }} && sudo git pull && exit"
