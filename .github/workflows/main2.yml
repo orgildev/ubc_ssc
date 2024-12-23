@@ -25,10 +25,12 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.SSH_HOSTNAME }} >> ~/.ssh/known_hosts
 
-    - name: Set up Git to use Personal Access Token
+    - name: Set up Git for HTTPS authentication with token
       run: |
-        git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf "git@github.com:"
         git config --global credential.helper store
+        git config --global user.email "your-email@example.com"
+        git config --global user.name "your-username"
+        echo "https://${{ secrets.GH_TOKEN }}:x-oauth-basic@github.com" > ~/.git-credentials
 
     - name: Connect and Pull Latest Changes
       run: |
@@ -40,4 +42,4 @@ jobs:
           exit"
 
     - name: Cleanup
-      run: rm -rf ~/.ssh
+      run: rm -rf ~/.ssh ~/.git-credentials
