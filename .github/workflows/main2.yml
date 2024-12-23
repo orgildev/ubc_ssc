@@ -39,6 +39,15 @@ jobs:
           git reset --hard origin/${{ secrets.MAIN_BRANCH }} &&
           git clean -fdx &&
           exit"
+
+    - name: Authenticate with GitHub using Token
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }} "
+          cd /var/www/ubc_ssc &&
+          git config --global url.https://github.com/.insteadOf git@github.com: &&
+          git config --global credential.helper store &&
+          echo https://${{ secrets.GH_TOKEN }}:x-oauth-basic > ~/.git-credentials &&
+          git pull && exit"
         
     - name: Cleanup
       run: rm -rf ~/.ssh
