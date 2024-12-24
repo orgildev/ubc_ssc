@@ -28,13 +28,13 @@ jobs:
     - name: Ensure Correct Permissions
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }} "
-          sudo chown -R ${{ secrets.SSH_USER }}:${{ secrets.SSH_USER }} /var/www/ubc_ssc &&
-          sudo chmod -R 755 /var/www/ubc_ssc"
+          sudo chown -R ${{ secrets.SSH_USER }}:${{ secrets.SSH_USER }} /home/ubuntu/ubc_ssc &&
+          sudo chmod -R 755 /home/ubuntu/ubc_ssc"
         
     - name: Reset Repository and Pull Latest Changes
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }} "
-          cd /var/www/ubc_ssc &&
+          cd /home/ubuntu/ubc_ssc &&
           git fetch --all &&
           git reset --hard origin/${{ secrets.MAIN_BRANCH }} &&
           git clean -fdx &&
