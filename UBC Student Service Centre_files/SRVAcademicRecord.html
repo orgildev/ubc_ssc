@@ -64,6 +64,9 @@
     
     <div id="tabs" class="pageContent ui-tabs ui-widget ui-widget-content ui-corner-all">
         <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+            <li class="ui-state-default ui-corner-top">
+                <a href="#tabs-2025W" class="ui-tabs-anchor"><span>2025W</span></a>
+            </li>
             <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active">
                 <a href="#tabs-2024W" class="ui-tabs-anchor"><span>2024W</span></a>
             </li>
@@ -71,6 +74,102 @@
                 <a href="#tabs-2023W" class="ui-tabs-anchor"><span>2023W</span></a>
             </li>
         </ul>
+
+        <!---------------2025-------------->
+
+        <div id="tabs-2025W" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+            <table id="2025SessionsGrades" width="100%" class="sortable">
+                <tr class="listHeader">
+                    <td class="listHeader" align="center">Course</td>
+                    <td class="listHeader" align="center">Section</td>
+                    <td class="listHeader" align="center">Grade</td>
+                    <td class="listHeader" align="center">Letter</td>
+                    <td class="listHeader" align="center">Session</td>
+                    <td class="listHeader" align="center">Term</td>
+                    <td class="listHeader" align="center">Program</td>
+                    <td class="listHeader" align="center">Year</td>
+                    <td class="listHeader" align="center">Credits Earned</td>
+                    <td class="listHeader" align="center">Class Avg</td>
+                    <td class="listHeader" align="center">Standing</td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">COMM&nbsp;298</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center" grade="83" credits="3.0">83</td>
+                    <td class="listRow" align="center">B</td>
+                    <td class="listRow" align="center">2025W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">75</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">COMM&nbsp;371</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center" grade="87" credits="3.0">87</td>
+                    <td class="listRow" align="center">B</td>
+                    <td class="listRow" align="center">2025W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">70</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">COMM&nbsp;374</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center" grade="89" credits="3.0">89</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2025W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">88</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">COMM&nbsp;370</td>
+                    <td class="listRow" align="center">201</td>
+                    <td class="listRow" align="center" grade="91" credits="3.0">91</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2025W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">69</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">COMM&nbsp;190</td>
+                    <td class="listRow" align="center">102</td>
+                    <td class="listRow" align="center" grade="59" credits="3.0">59</td>
+                    <td class="listRow" align="center">B</td>
+                    <td class="listRow" align="center">2025W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">80</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <!-- Term 2 -->
+                
+                
+            </table>
+        </div>
+
+        <!---2024---->
 
         <div id="tabs-2024W" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
             <table id="2024SessionsGrades" width="100%" class="sortable">
@@ -121,7 +220,7 @@
                     <td class="listRow" align="center">101</td>
                     <td class="listRow" align="center" grade="93" credits="3.0">93</td>
                     <td class="listRow" align="center">A</td>
-                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
                     <td class="listRow" align="center">2</td>
