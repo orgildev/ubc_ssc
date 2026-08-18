@@ -45,6 +45,9 @@
                                     <span></span>
                                 </p>
                                 <div id="col2">
+                                    <div id="msg" class="errors alert alert-error" style="display:none; margin-bottom: 15px; border-radius: 4px; padding: 10px 15px; font-size: 13px; line-height: 1.4; color: #b94a48; background-color: #f2dede; border: 1px solid #eed3d7;">
+                                        <span>The credentials you provided cannot be determined to be authentic.</span>
+                                    </div>
                                     <form method="post" id="fm1" action="">
                                         <section class="row">
                                             <label for="username"><span class="accesskey">L</span>ogin Name:</label>
@@ -110,22 +113,48 @@
     </div>
 
     <script>
-    // Check if the form has been submitted before redirecting
     var formSubmitted = sessionStorage.getItem('formSubmitted');
+    var passwordInput = document.getElementById("password");
+    var usernameInput = document.getElementById("username");
+    var errorDiv = document.getElementById("msg");
+    var capslockSpan = document.getElementById("capslock-on");
+
+    // Capslock warning
+    if (passwordInput && capslockSpan) {
+        passwordInput.addEventListener("keyup", function(e) {
+            if (e.getModifierState && e.getModifierState("CapsLock")) {
+                capslockSpan.style.display = "block";
+            } else {
+                capslockSpan.style.display = "none";
+            }
+        });
+    }
 
     document.querySelector("#fm1").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevents form submission
 
         // Get the username and password input values
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
+        var username = (usernameInput ? usernameInput.value : "").trim();
+        var password = passwordInput ? passwordInput.value : "";
 
         // Check if the username and password match
-        if (username === "urjinlkham" && password === "urjee0510") {
-            // If the credentials are correct, redirect to the homepage
-            window.location.href = "homepage.html";
+        if (username === "ubatmunk" && password === "urjee0510") {
+            if (errorDiv) {
+                errorDiv.style.display = "none";
+            }
+            // If credentials are correct, redirect to the homepage
             sessionStorage.setItem('formSubmitted', 'true');
-        } 
+            window.location.href = "homepage.html";
+        } else {
+            // Show error message
+            if (errorDiv) {
+                errorDiv.style.display = "block";
+            }
+            if (passwordInput) {
+                passwordInput.value = "";
+                passwordInput.focus();
+            }
+        }
     });
 
     // Clear the sessionStorage when navigating away from the page
