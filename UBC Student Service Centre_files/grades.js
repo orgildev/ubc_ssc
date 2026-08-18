@@ -52,6 +52,6 @@ $(document).ready(function() {
         switchTab(tabId);
     });
     
-    // Initialize with 2024W tab
-    switchTab('tabs-2025W');
+    // Initialize with 2026W tab
+    switchTab('tabs-2026W');
 });

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,7 +46,7 @@
     <div id="printer" onclick="printWindow()" class="noPrint">Print</div>
     <h1>Your Grades Summary</h1>
 
-    <p class="grades-title" id="calculator_title">Average : 88.6%</p>
+    <p class="grades-title" id="calculator_title">Average : 87.4%</p>
     <div id="calculator_title_text" class="grades-content">
         <div class="infoMessage" id="calculator_selector" style="width:235px; float:left; text-align: left; line-height:22px">
             <h1>Calculate average using:</h1>
@@ -66,6 +66,10 @@
         <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
 
             <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active">
+                <a href="#tabs-2026W" class="ui-tabs-anchor"><span>2026W</span></a>
+            </li>
+
+            <li class="ui-state-default ui-corner-top">
                 <a href="#tabs-2025W" class="ui-tabs-anchor"><span>2025W</span></a>
             </li>
 
@@ -77,9 +81,160 @@
             </li>
         </ul>
 
+        <!---------------2026-------------->
+
+        <div id="tabs-2026W" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+            <table id="2026SessionsGrades" width="100%" class="sortable">
+                <tr class="listHeader">
+                    <td class="listHeader" align="center">Course</td>
+                    <td class="listHeader" align="center">Section</td>
+                    <td class="listHeader" align="center">Grade</td>
+                    <td class="listHeader" align="center">Letter</td>
+                    <td class="listHeader" align="center">Session</td>
+                    <td class="listHeader" align="center">Term</td>
+                    <td class="listHeader" align="center">Program</td>
+                    <td class="listHeader" align="center">Credits Earned</td>
+                    <td class="listHeader" align="center">Class Avg</td>
+                    <td class="listHeader" align="center">Standing</td>
+                </tr>
+
+                <!-- Term 1 -->
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;411</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;421</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;430</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;442</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;470</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <!-- Term 2 -->
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;412</td>
+                    <td class="listRow" align="center">201</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;422</td>
+                    <td class="listRow" align="center">201</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;435</td>
+                    <td class="listRow" align="center">201</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;441</td>
+                    <td class="listRow" align="center">201</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+
+                <tr class="listRow" onclick="$('#manRadio').attr('checked',true); $(this).find('td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;490</td>
+                    <td class="listRow" align="center">201</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center">2026W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                    <td class="listRow" align="center"></td>
+                </tr>
+            </table>
+        </div>
+
         <!---------------2025-------------->
 
-        <div id="tabs-2025W" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+        <div id="tabs-2025W" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display:none;">
             <table id="2025SessionsGrades" width="100%" class="sortable">
                 <tr class="listHeader">
                     <td class="listHeader" align="center">Course</td>
@@ -89,7 +244,6 @@
                     <td class="listHeader" align="center">Session</td>
                     <td class="listHeader" align="center">Term</td>
                     <td class="listHeader" align="center">Program</td>
-                    <td class="listHeader" align="center">Year</td>
                     <td class="listHeader" align="center">Credits Earned</td>
                     <td class="listHeader" align="center">Class Avg</td>
                     <td class="listHeader" align="center">Standing</td>
@@ -103,7 +257,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">75</td>
                     <td class="listRow" align="center"></td>
@@ -117,7 +270,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">78</td>
                     <td class="listRow" align="center"></td>
@@ -131,7 +283,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">85</td>
                     <td class="listRow" align="center"></td>
@@ -145,7 +296,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">72</td>
                     <td class="listRow" align="center"></td>
@@ -159,7 +309,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">60</td>
                     <td class="listRow" align="center"></td>
@@ -174,7 +323,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">76</td>
                     <td class="listRow" align="center"></td>
@@ -188,7 +336,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">82</td>
                     <td class="listRow" align="center"></td>
@@ -202,7 +349,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">79</td>
                     <td class="listRow" align="center"></td>
@@ -216,7 +362,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">81</td>
                     <td class="listRow" align="center"></td>
@@ -230,7 +375,6 @@
                     <td class="listRow" align="center">2025W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">3</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">74</td>
                     <td class="listRow" align="center"></td>
@@ -250,7 +394,6 @@
                     <td class="listHeader" align="center">Session</td>
                     <td class="listHeader" align="center">Term</td>
                     <td class="listHeader" align="center">Program</td>
-                    <td class="listHeader" align="center">Year</td>
                     <td class="listHeader" align="center">Credits Earned</td>
                     <td class="listHeader" align="center">Class Avg</td>
                     <td class="listHeader" align="center">Standing</td>
@@ -264,7 +407,6 @@
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">85</td>
                     <td class="listRow" align="center"></td>
@@ -278,7 +420,6 @@
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">70</td>
                     <td class="listRow" align="center"></td>
@@ -292,7 +433,6 @@
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">88</td>
                     <td class="listRow" align="center"></td>
@@ -306,7 +446,6 @@
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">69</td>
                     <td class="listRow" align="center"></td>
@@ -320,78 +459,72 @@
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">1</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">80</td>
                     <td class="listRow" align="center"></td>
                 </tr>
 
                 <!-- Term 2 -->
-                <tr id="row-all-5" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-5 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
+                <tr id="row-all-5" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-5 td').toggleClass('listHighlight'); recalculate()">
                     <td class="listRow" align="center">MGMT&nbsp;250</td>
                     <td class="listRow" align="center">101</td>
-                    <td class="listRow grade" grade=" " credits="3.0" align="center">91</td>
+                    <td class="listRow grade" grade="91" credits="3.0" align="center">91</td>
                     <td class="listRow" align="center">A</td>
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">83</td>
                     <td class="listRow" align="center"></td>
                 </tr>
                 
-                <tr id="row-all-6" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-6 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
+                <tr id="row-all-6" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-6 td').toggleClass('listHighlight'); recalculate()">
                     <td class="listRow" align="center">MGMT&nbsp;240</td>
                     <td class="listRow" align="center">202</td>
-                    <td class="listRow grade" grade=" " credits="3.0" align="center">94</td>
+                    <td class="listRow grade" grade="94" credits="3.0" align="center">94</td>
                     <td class="listRow" align="center">A</td>
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">89</td>
                     <td class="listRow" align="center"></td>
                 </tr>
                 
-                <tr id="row-all-7" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-7 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
+                <tr id="row-all-7" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-7 td').toggleClass('listHighlight'); recalculate()">
                     <td class="listRow" align="center">MGMT&nbsp;230</td>
                     <td class="listRow" align="center">101</td>
-                    <td class="listRow grade" grade=" " credits="3.0" align="center">81</td>
+                    <td class="listRow grade" grade="81" credits="3.0" align="center">81</td>
                     <td class="listRow" align="center">B</td>
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">73</td>
                     <td class="listRow" align="center"></td>
                 </tr>
                 
-                <tr id="row-all-8" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-8 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
+                <tr id="row-all-8" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-8 td').toggleClass('listHighlight'); recalculate()">
                     <td class="listRow" align="center">MGMT&nbsp;290</td>
                     <td class="listRow" align="center">110</td>
-                    <td class="listRow grade" grade=" " credits="3.0" align="center">83</td>
+                    <td class="listRow grade" grade="83" credits="3.0" align="center">83</td>
                     <td class="listRow" align="center">B</td>
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">68</td>
                     <td class="listRow" align="center"></td>
                 </tr>
                 
-                <tr id="row-all-9" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-9 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
+                <tr id="row-all-9" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-9 td').toggleClass('listHighlight'); recalculate()">
                     <td class="listRow" align="center">PSYO&nbsp;121</td>
                     <td class="listRow" align="center">101</td>
-                    <td class="listRow grade" grade=" " credits="3.0" align="center">85</td>
+                    <td class="listRow grade" grade="85" credits="3.0" align="center">85</td>
                     <td class="listRow" align="center">B</td>
                     <td class="listRow" align="center">2024W</td>
                     <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">BMGT-O</td>
-                    <td class="listRow" align="center">2</td>
                     <td class="listRow" align="center">3.0</td>
                     <td class="listRow" align="center">70</td>
                     <td class="listRow" align="center"></td>
@@ -410,151 +543,142 @@
                     <td class="listHeader" align="center">Session</td>
                     <td class="listHeader" align="center">Term</td>
                     <td class="listHeader" align="center">Program</td>
-                    <td class="listHeader" align="center">Year</td>
                     <td class="listHeader" align="center">Credits Earned</td>
                     <td class="listHeader" align="center">Class Avg</td>
                     <td class="listHeader" align="center">Standing</td>
                 </tr>
 
-                <tr id="row-all-0" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-0 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">MGMT&nbsp;110</td>
-                <td class="listRow" align="center">102</td>
-                <td class="listRow " grade=" " credits="3.0" align="center">98</td>
-                <td class="listRow" align="center">A</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">2</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">85</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <!-- Term 2 -->
+                <tr id="row-all-0" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-0 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;110</td>
+                    <td class="listRow" align="center">102</td>
+                    <td class="listRow" grade="98" credits="3.0" align="center">98</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">85</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-1" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-1 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">STAT&nbsp;101</td>
-                <td class="listRow" align="center">101</td>
-                <td class="listRow " grade=" " credits="3.0" align="center">80</td>
-                <td class="listRow" align="center">B</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">2</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">70</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-1" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-1 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">STAT&nbsp;101</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" grade="80" credits="3.0" align="center">80</td>
+                    <td class="listRow" align="center">B</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">70</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-2" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-2 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">ENGL&nbsp;109</td>
-                <td class="listRow" align="center">202</td>
-                <td class="listRow " grade=" " credits="3.0" align="center">95</td>
-                <td class="listRow" align="center">A</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">2</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">88</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-2" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-2 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">ENGL&nbsp;109</td>
+                    <td class="listRow" align="center">202</td>
+                    <td class="listRow" grade="95" credits="3.0" align="center">95</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">88</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-3" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-3 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">MATH&nbsp;101</td>
-                <td class="listRow" align="center">201</td>
-                <td class="listRow " grade=" " credits="3.0" align="center">82</td>
-                <td class="listRow" align="center">B</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">2</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">76</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-3" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-3 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MATH&nbsp;101</td>
+                    <td class="listRow" align="center">201</td>
+                    <td class="listRow" grade="82" credits="3.0" align="center">82</td>
+                    <td class="listRow" align="center">B</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">76</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-4" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-4 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">ECON&nbsp;103</td>
-                <td class="listRow" align="center">102</td>
-                <td class="listRow " grade=" " credits="3.0" align="center">78</td>
-                <td class="listRow" align="center">B</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">2</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">80</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-4" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-4 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">ECON&nbsp;103</td>
+                    <td class="listRow" align="center">102</td>
+                    <td class="listRow" grade="78" credits="3.0" align="center">78</td>
+                    <td class="listRow" align="center">B</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">80</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-5" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-5 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">PSYO&nbsp;102</td>
-                <td class="listRow" align="center">101</td>
-                <td class="listRow grade" grade=" " credits="3.0" align="center">91</td>
-                <td class="listRow" align="center">A</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">2</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">85</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-5" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-5 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">PSYO&nbsp;102</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" grade="91" credits="3.0" align="center">91</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">2</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">85</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-6" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-6 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">PSYO&nbsp;111</td>
-                <td class="listRow" align="center">202</td>
-                <td class="listRow grade" grade=" " credits="3.0" align="center">93</td>
-                <td class="listRow" align="center">A</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">81</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <!-- Term 1 -->
+                <tr id="row-all-6" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-6 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">PSYO&nbsp;111</td>
+                    <td class="listRow" align="center">202</td>
+                    <td class="listRow" grade="93" credits="3.0" align="center">93</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">81</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-7" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-7 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">MGMT&nbsp;100</td>
-                <td class="listRow" align="center">101</td>
-                <td class="listRow grade" grade=" " credits="3.0" align="center">94</td>
-                <td class="listRow" align="center">A</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">83</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-7" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-7 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">MGMT&nbsp;100</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" grade="94" credits="3.0" align="center">94</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">83</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-8" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-8 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">ECON&nbsp;101</td>
-                <td class="listRow" align="center">110</td>
-                <td class="listRow grade" grade=" " credits="3.0" align="center">62</td>
-                <td class="listRow" align="center">C</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">61</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-8" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-8 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">ECON&nbsp;101</td>
+                    <td class="listRow" align="center">110</td>
+                    <td class="listRow" grade="62" credits="3.0" align="center">62</td>
+                    <td class="listRow" align="center">C</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">61</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             
-            <tr id="row-all-9" class="listRow" style="cursor: pointer" onclick="$(&#39;#manRadio&#39;).attr(&#39;checked&#39;,true); $(&#39;#row-all-9 td&#39;).toggleClass(&#39;listHighlight&#39;); recalculate()">
-                <td class="listRow" align="center">ENGL&nbsp;109</td>
-                <td class="listRow" align="center">101</td>
-                <td class="listRow grade" grade=" " credits="3.0" align="center">97</td>
-                <td class="listRow" align="center">A</td>
-                <td class="listRow" align="center">2023W</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">BMGT-O</td>
-                <td class="listRow" align="center">1</td>
-                <td class="listRow" align="center">3.0</td>
-                <td class="listRow" align="center">89</td>
-                <td class="listRow" align="center"></td>
-            </tr>
+                <tr id="row-all-9" class="listRow" style="cursor: pointer" onclick="$('#manRadio').attr('checked',true); $('#row-all-9 td').toggleClass('listHighlight'); recalculate()">
+                    <td class="listRow" align="center">ENGL&nbsp;109</td>
+                    <td class="listRow" align="center">101</td>
+                    <td class="listRow" grade="97" credits="3.0" align="center">97</td>
+                    <td class="listRow" align="center">A</td>
+                    <td class="listRow" align="center">2023W</td>
+                    <td class="listRow" align="center">1</td>
+                    <td class="listRow" align="center">BMGT-O</td>
+                    <td class="listRow" align="center">3.0</td>
+                    <td class="listRow" align="center">89</td>
+                    <td class="listRow" align="center"></td>
+                </tr>
             </table>
         </div>
     </div>
